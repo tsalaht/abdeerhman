@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Index from './Index'; 
 import SingUp from './SingUp';
 import NewSesson from './NewSesson';
+import Store from './Store';
 
 const Stack = createStackNavigator(); 
 
@@ -16,6 +17,9 @@ const Screens: React.FC = () => {
           headerShown: false,
         }}/>
                <Stack.Screen name="New Sesson" component={NewSesson}  options={{
+          headerShown: false,
+        }}/>
+                 <Stack.Screen name="Store" component={Store}  options={{
           headerShown: false,
         }}/>
     </Stack.Navigator>

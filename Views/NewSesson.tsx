@@ -145,12 +145,15 @@ const NewSesson: React.FC  = () => {
             </HStack>
         </VStack>
       </VStack>
+    
       <HStack zIndex={33} px={'16px'} marginTop={'16px'}>
-        <Stack flex={1} alignItems={'center'} justifyContent={'center'} backgroundColor={'#FFAF36'} py={'18px'}rounded={'8px'}  style={{elevation:10,shadowColor:'#EFB054'}}>
+      <Pressable style={{flex:1}} onPress={() => navigation.navigate('Store')}>
+        <Stack  alignItems={'center'} justifyContent={'center'} backgroundColor={'#FFAF36'} py={'18px'}rounded={'8px'}  style={{elevation:10,shadowColor:'#EFB054'}}>
             <Text fontSize={'16px'} fontFamily={'Almarai_Bold'} color={'white'}>
             انشئ الجلسة
             </Text>
         </Stack>
+        </Pressable>
       </HStack>
     { showLevel && <Stack position={'absolute'} w={'full'} h={'full'} zIndex={999999999999} backgroundColor={'#00000090'} >
         <Pressable onPress={()=>setShowLevel(false)}>

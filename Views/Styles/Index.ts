@@ -67,6 +67,33 @@ backgroundColor:'#131514',
     margin: 4,
     justifyContent: "center",
   },
+  wrapper: {},
+  slide1: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+
+  },
+  slide2: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+
+  },
+  slide3: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+   
+  },
+  text: {
+    color: '#fff',
+    fontSize: 20,
+    fontWeight: 'bold'
+  },
+  pagination: {
+    bottom: -10, // Adjust this value to change the vertical position of the pagination dots
+  },
 });
 
 export default styles;
