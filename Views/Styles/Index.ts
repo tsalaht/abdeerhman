@@ -16,6 +16,11 @@ backgroundColor:'#131514',
     overflow: "visible",
     
   },
+  background: {
+    flex: 1,
+    width: '100%',
+    height: '100%',
+},
 
   logoContainer: {
     top: 10,

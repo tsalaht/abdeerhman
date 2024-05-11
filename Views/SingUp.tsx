@@ -6,7 +6,7 @@ import { SvgXml } from 'react-native-svg';
 import { svgs } from "./Svg/svg";
 import { background } from "native-base/lib/typescript/theme/styled-system";
 import { Pressable } from "react-native";
-import { StyleSheet } from 'react-native';
+import { StyleSheet,ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const SingUp: React.FC  = () => {
@@ -34,7 +34,8 @@ const SingUp: React.FC  = () => {
 
    return (
     <View style={styles.viewContainer}>
-        <Box position={'absolute'} width={'full'} h={'full'} zIndex={1} backgroundColor={'#000000d9'}  >
+             <ImageBackground style={styles.background}  source={plagin}  alt="plagin">
+        <Box position={'absolute'} width={'full'} h={'full'} zIndex={0} backgroundColor={'#000000d9'}  >
 
         </Box>
         <Stack px={'8px'} w={'full'}>
@@ -118,7 +119,7 @@ const SingUp: React.FC  = () => {
 
         </VStack>
         </Stack>
-        <Image position={'absolute'} top={0} left={0}  source={plagin} w={'100%'} h={'100%'} alt="plagin"/>
+        </ImageBackground>
     </View>
    );
 

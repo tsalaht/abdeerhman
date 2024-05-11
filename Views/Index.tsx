@@ -4,7 +4,7 @@ import React from "react";
 import styles from "./Styles/Index";
 import { SvgXml } from 'react-native-svg';
 import { svgs } from "./Svg/svg";
-import { Pressable } from "react-native";
+import { ImageBackground, Pressable } from "react-native";
 import { StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import * as yup from "yup"
@@ -48,15 +48,19 @@ const Index: React.FC  = () => {
           justifyContent:'center',
           borderRadius:16
         },
+        background: {
+            flex: 1,
+            width: '100%',
+            height: '100%',
+        },
       
         
       });
       const navigation:any = useNavigation();
    return (
     <View style={styles.viewContainer}>
-        <Box position={'absolute'} width={'full'} h={'full'} zIndex={1} backgroundColor={'#000000d9'}  >
-
-        </Box>
+        <ImageBackground style={styles.background}  source={plagin}  alt="plagin">
+        <Box position={'absolute'} width={'full'} h={'full'} zIndex={0} backgroundColor={'#000000d9'}  ></Box>
         <Stack px={'8px'} w={'full'}>
         <VStack px={'13.5px'}>
         <Box  zIndex={333333333333} w={'full'} alignItems={'center'} justifyContent={'center'} paddingTop={'75.2px'}> 
@@ -125,7 +129,9 @@ const Index: React.FC  = () => {
 
         </VStack>
         </Stack>
-        <Image position={'absolute'} top={0} left={0}  source={plagin} w={'100%'} h={'100%'} alt="plagin"/>
+        <Image/>
+
+        </ImageBackground>
     </View>
    );
 

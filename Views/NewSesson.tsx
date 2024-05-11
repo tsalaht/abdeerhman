@@ -6,7 +6,7 @@ import { SvgXml } from 'react-native-svg';
 import { svgs } from "./Svg/svg";
 import { background } from "native-base/lib/typescript/theme/styled-system";
 import { Pressable } from "react-native";
-import { StyleSheet } from 'react-native';
+import { StyleSheet,ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import BottomSheet, {
     BottomSheetScrollView,
@@ -59,6 +59,7 @@ const NewSesson: React.FC  = () => {
       };
    return (
     <View style={styles.viewContainer}>
+       <ImageBackground style={styles.background}  source={plagin}  alt="plagin">
         <Box position={'absolute'} width={'full'} h={'full'} zIndex={1} backgroundColor={'#000000d9'}  >
 
         </Box>
@@ -178,7 +179,7 @@ const NewSesson: React.FC  = () => {
 </VStack>
 </VStack>
       </Stack>}
-        <Image position={'absolute'} top={0} left={0}  source={plagin} w={'100%'} h={'100%'} alt="plagin"/>
+      </ImageBackground>
    
     </View>
    );
